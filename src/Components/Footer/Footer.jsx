@@ -4,7 +4,7 @@ import React from 'react';
 function Footer(props) {
     return (
 
-        <section className="mb-5">
+        <footer className="mb-5">
             <div className="accordion" id="accordionExample">
                 <div className="accordion-item">
                 <h2 className="accordion-header" id="headingOne">
@@ -38,7 +38,7 @@ function Footer(props) {
                 </div>
                 </div>
             </div>
-            </section>
+        </footer>
 
     );
 }

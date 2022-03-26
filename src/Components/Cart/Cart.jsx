@@ -5,7 +5,7 @@ function Cart(props) {
     
     const chooseOne = (cart)=>{
         let suffledArr = [...cart]
-        for(let i=suffledArr.length-1;i>0;i--){
+        for(let i=suffledArr.length-1;i>-1;i--){
             let rand =Math.floor(Math.random()*(i+1))
             let temp = suffledArr[rand]
             suffledArr[rand] = suffledArr[i]
