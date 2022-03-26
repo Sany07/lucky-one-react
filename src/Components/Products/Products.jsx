@@ -20,7 +20,7 @@ const Products = ()=> {
 
     return (
         <section className="row">
-            <div className="col-md-9">
+            <div className="col-md-9 order-last order-md-first">
                 <div className="row">
                     {
                         products.map((product,index)=>{

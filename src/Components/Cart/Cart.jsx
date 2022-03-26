@@ -16,8 +16,8 @@ function Cart(props) {
     }
 
     return (
-        <section className="col-md-3 sticky-top">                    
-            <div className="card">
+        <section className="col-md-3 order-sm-1">                    
+            <div className="card mb-5">
             <div className="p-1">
                 <h6 className="p-2 card-title text-center">Selected Products</h6>
                 {
