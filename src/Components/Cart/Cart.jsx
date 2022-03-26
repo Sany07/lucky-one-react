@@ -4,15 +4,13 @@ function Cart(props) {
     const {cart, clearCart, setCart} = props
     
     const chooseOne = (cart)=>{
-        let suffledArr = [...cart]
-        for(let i=suffledArr.length-1;i>-1;i--){
-            let rand =Math.floor(Math.random()*(i+1))
-            let temp = suffledArr[rand]
-            suffledArr[rand] = suffledArr[i]
-            suffledArr[i] = temp
+        if(cart.length>0){
+            let suffledArr = [...cart]
+            const rand=Math.floor(Math.random()*(suffledArr.length))
+            setCart([suffledArr[rand]])
+        }else{
+            alert("Select Product First")
         }
-
-        setCart([suffledArr[0]])
     }
 
     return (
