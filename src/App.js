@@ -4,10 +4,13 @@ import Products from './Components/Products/Products';
 
 function App() {
   return (
-    <div className="container">
-      <Header/>
-      <Products/>
-    </div>
+  <>
+    <Header/>
+      <div className="container"> 
+        <Products/>
+      </div>
+  </>
+  
   );
 }
 

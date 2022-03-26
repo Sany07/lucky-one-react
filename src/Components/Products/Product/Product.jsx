@@ -1,21 +1,19 @@
 import React from 'react';
+import './Product.css';
 
 const Product = (props) => {
     const { product, addToCart } = props
     return (
-        <div className="col-md-4">
-            <div className="card h-100">
-            <img src={product.image} className="card-img-top" alt="..." />
-            <div className="card-body">
-                <h5 className="card-title">{product.name}</h5>
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+        <div className="col-md-4 mb-5">
+            <div className=" card card-shadow w-100 h-100">
+            <img src={product.image} className="card-img-top p-3 img-fluid text-center mt-3" alt="..." />
+            <div className="m-1 p-2">
+                <h7>Name : {product.name}</h7>
+                <p>Price : ${product.price}</p>
             </div>
-            <div className="card-footer">
-                <small className="text-muted">
-                <button onClick={()=>addToCart(product)} type="button" className="btn text-black">Add To Card   <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
+            <div className="card-footer mt-0 text-center">
+                <button onClick={()=>addToCart(product)} type="button" className="btn btn-danger text-white rounded">Add To Card   <i className="fa fa-cart-arrow-down" aria-hidden="true"></i>
                 </button>
-              
-                </small>
             </div>
             </div>
         </div>

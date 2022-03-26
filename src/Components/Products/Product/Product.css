@@ -1,0 +1,5 @@
+.card-shadow{border-radius: 11px;
+    background: #ffffff;
+    box-shadow:  -6px 6px 12px #c4c4c4,
+                 6px -6px 12px #ffffff;
+}
