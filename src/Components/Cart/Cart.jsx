@@ -1,17 +1,40 @@
 import React from 'react';
 
 function Cart(props) {
+    const {cart, clearCart, setCart} = props
+    
+    const chooseOne = (cart)=>{
+        let suffledArr = [...cart]
+        for(let i=suffledArr.length-1;i>0;i--){
+            let rand =Math.floor(Math.random()*(i+1))
+            let temp = suffledArr[rand]
+            suffledArr[rand] = suffledArr[i]
+            suffledArr[i] = temp
+        }
+
+        setCart([suffledArr[0]])
+    }
+
     return (
-        <div className="col-md-3">
-            <div className="card h-100">
-            <img src="" className="card-img-top" alt="..." />
+        <div className="col-md-3">                    
+            <div className="card">
             <div className="card-body">
-                <h5 className="card-title">'sa'</h5>
-                <p className="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <h5 className="card-title">Selected Products</h5>
+                
+                
+                {
+
+                    cart.map((cart,index)=>{
+                        return (
+                        
+                        <div className="prduct">
+                            
+                        </div>
+                    
+                    )})
+                }
             </div>
-            <div className="card-footer">
-                <small className="text-muted">Last updated 3 mins ago</small>
-            </div>
+            <button onClick={()=>chooseOne(cart)} type="button" className="btn btn-info text-white">Choose 1 For Me</button><button onClick={()=>clearCart()}type="button" className="btn btn-danger text-white">Choose Again</button>
             </div>
         </div>
     );
