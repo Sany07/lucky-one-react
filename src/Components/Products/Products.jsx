@@ -19,7 +19,7 @@ const Products = ()=> {
 
 
     return (
-        <div className="row">
+        <section className="row">
             <div className="col-md-9">
                 <div className="row">
                     {
@@ -32,7 +32,7 @@ const Products = ()=> {
             <Cart  clearCart={clearCart} cart={cart} setCart={setCart}
             />
 
-        </div>
+        </section>
 
 
     );
